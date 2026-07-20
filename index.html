@@ -61,6 +61,11 @@
     color:var(--muted);
     font-size:0.95rem;
   }
+  header p.privacy-note{
+    margin-top:8px;
+    font-size:0.82rem;
+    color:var(--amber-bright);
+  }
   main{
     max-width:920px;
     margin:0 auto;
@@ -126,6 +131,13 @@
     background:var(--amber-dim);
     color:var(--amber-bright);
     box-shadow: inset 0 -2px 0 var(--amber);
+  }
+
+  .zoom-hint{
+    margin:0 0 18px;
+    font-size:0.8rem;
+    color:var(--muted);
+    font-style:italic;
   }
 
   .stage{
@@ -247,6 +259,7 @@
 <header>
   <h1>CROP<span>.</span></h1>
   <p>Upload a photo, pick a frame, export at full quality — all in your browser.</p>
+  <p class="privacy-note">🔒 Your photo never leaves this device — nothing is uploaded anywhere.</p>
 </header>
 
 <main>
@@ -266,8 +279,8 @@
       <button class="frame-tab" data-ratio="0.75">3:4 Portrait</button>
       <button class="frame-tab" data-ratio="1.7777777778">16:9 Landscape</button>
       <button class="frame-tab" data-ratio="0.5625">9:16 Portrait</button>
-      <button class="frame-tab" data-ratio="NaN">Freeform</button>
     </div>
+    <p class="zoom-hint">Tip: use your mouse scroll wheel to zoom in and out on the photo.</p>
 
     <div class="stage">
       <div id="imageCanvasWrap">
@@ -282,7 +295,7 @@
     <div class="action-row">
       <button class="btn btn-ghost" id="resetBtn">Reset crop</button>
       <button class="btn btn-ghost" id="newPhotoBtn">Load different photo</button>
-      <button class="btn btn-primary" id="exportBtn">Export crop</button>
+      <button class="btn btn-primary" id="exportBtn">Export/download cropped photo</button>
     </div>
 
   </div>
