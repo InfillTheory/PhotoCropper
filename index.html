@@ -258,8 +258,8 @@
 
 <header>
   <h1>CROP<span>.</span></h1>
-  <p>Upload a photo, pick a frame, export at full quality — all in your browser.</p>
-  <p class="privacy-note">🔒 Your photo never leaves this device — nothing is uploaded anywhere.</p>
+  <p>Upload a photo, crop based on listing instructions and export all from your device.</p>
+  <p class="privacy-note">🔒 Your photo never leaves your computer, nothing is uploaded anywhere.</p>
 </header>
 
 <main>
@@ -274,7 +274,7 @@
   <div id="workspace">
 
     <div class="frame-tabs" id="frameTabs">
-      <button class="frame-tab" data-ratio="1">1:1 Square</button>
+      <button class="frame-tab" data-ratio="1">1:1 Square (Nightlight)</button>
       <button class="frame-tab" data-ratio="1.3333333333">4:3 Landscape</button>
       <button class="frame-tab" data-ratio="0.75">3:4 Portrait</button>
       <button class="frame-tab" data-ratio="1.7777777778">16:9 Landscape</button>
@@ -295,7 +295,7 @@
     <div class="action-row">
       <button class="btn btn-ghost" id="resetBtn">Reset crop</button>
       <button class="btn btn-ghost" id="newPhotoBtn">Load different photo</button>
-      <button class="btn btn-primary" id="exportBtn">Export/download cropped photo</button>
+      <button class="btn btn-primary" id="exportBtn">Export/Download Cropped Photo</button>
     </div>
 
   </div>
@@ -437,7 +437,7 @@
       }
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
-      link.download = `${currentFileName}-crop.jpg`;
+      link.download = `${currentFileName}-cropped.jpg`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
