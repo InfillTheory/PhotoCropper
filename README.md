@@ -1,0 +1,1 @@
+Just a photo cropping tool designed to be very simple and easy to use. Allows people who are getting custom things done with their photos to crop them before sending them for someone else to work on. This means you can get the exact things you want to stay within your resulting product.
