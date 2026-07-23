@@ -293,6 +293,8 @@
     </div>
 
     <div class="action-row">
+      <button class="btn btn-ghost" id="rotateLeftBtn" title="Rotate 90° left">↺ Rotate Left</button>
+      <button class="btn btn-ghost" id="rotateRightBtn" title="Rotate 90° right">↻ Rotate Right</button>
       <button class="btn btn-ghost" id="resetBtn">Reset crop</button>
       <button class="btn btn-ghost" id="newPhotoBtn">Load different photo</button>
       <button class="btn btn-primary" id="exportBtn">Export/Download Cropped Photo</button>
@@ -314,6 +316,8 @@
   const frameTabs = document.getElementById('frameTabs');
   const dimsReadout = document.getElementById('dimsReadout');
   const resetBtn = document.getElementById('resetBtn');
+  const rotateLeftBtn = document.getElementById('rotateLeftBtn');
+  const rotateRightBtn = document.getElementById('rotateRightBtn');
   const newPhotoBtn = document.getElementById('newPhotoBtn');
   const exportBtn = document.getElementById('exportBtn');
 
@@ -399,6 +403,14 @@
     const ratio = parseFloat(btn.dataset.ratio);
     cropper.setAspectRatio(isNaN(ratio) ? NaN : ratio);
   }
+
+  // ---- Rotate ----
+  rotateLeftBtn.addEventListener('click', () => {
+    if (cropper) cropper.rotate(-90);
+  });
+  rotateRightBtn.addEventListener('click', () => {
+    if (cropper) cropper.rotate(90);
+  });
 
   // ---- Reset / new photo ----
   resetBtn.addEventListener('click', () => {
